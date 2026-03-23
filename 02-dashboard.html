@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Maintenance System | Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body-navigation">
+  <div class="menu">
+    <div class="menu-title">
+      <span class="menu-badge">v1.0</span>
+      <h2>Smart Maintenance System</h2>
+      <p>Painel de manutenção industrial</p>
+    </div>
+    <div class="menu-navigation">
+      <a href="02-dashboard.html" class="menu-navigation-card">Dashboard</a>
+      <a href="03-cadastro.html" class="menu-navigation-card">Nova Ocorrencia</a>
+      <a href="04-ocorrencias.html" class="menu-navigation-card">Ocorrencias</a>
+      <a href="#" class="menu-navigation-card zip-card">Relatórios</a>
+      <a href="#" class="menu-navigation-card zip-card">Configuracoes</a>
+    </div>
+    <div class="menu-description">
+      <strong>Smart Maintenance</strong>
+      <p>Sistema para acompanhamento de falhas e ordens de manutenção.</p>
+      <span>v1.0.0 - 2026</span>
+    </div>
+  </div>
+  <div class="dashboard">
+    <div class="dashboard-header">
+      <h1>Dashboard</h1>
+      <p>Acompanhe os principais indicadores de falhas e manutenção</p>
+    </div>
+    <div class="dashboard-abstracts">
+      <div class="dashboard-abstracts-card">
+        <p>Ocorrências abertas</p>
+        <h1>12</h1>
+        <p>+2 desde ontem</p>
+      </div>
+      <div class="dashboard-abstracts-card">
+        <p>Em análise</p>
+        <h1>5</h1>
+        <p>1 prioridade alta</p>
+      </div>
+      <div class="dashboard-abstracts-card">
+        <p>Em manutenção</p>
+        <h1>3</h1>
+        <p>2 equipes em campo</p>
+      </div>
+      <div class="dashboard-abstracts-card">
+        <p>Resolvidos</p>
+        <h1>18</h1>
+        <p>Últimos 7 dias</p>
+      </div>
+    </div>
+    <div class="dashboard-footer">
+      <div class="dashboard-footer-occurrences">
+        <h3>Últimas ocorrências</h3>
+        <table>
+          <thead>
+            <tr>
+              <td>ID</td>
+              <td>Equipamento</td>
+              <td>Setor</td>
+              <td>Prioridade</td>
+              <td>Status</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#001</td>
+              <td>Rôbo KUKA KR180</td>
+              <td>Solda</td>
+              <td><p class="tag-orange">Alta</p></td>
+              <td><p class="tag-yellow">Aberta</p></td>
+            </tr>
+            <tr>
+              <td>#002</td>
+              <td>CLP Mitsubishi FX</td>
+              <td>Montagem</td>
+              <td><p class="tag-yellow">Média</p></td>
+              <td><p class="tag-orange">Em análise</p></td>
+            </tr>
+            <tr>
+              <td>#003</td>
+              <td>Esteira principal</td>
+              <td>Produção</td>
+              <td><p class="tag-red">Crítica</p></td>
+              <td><p class="tag-red">Em manutenção</p></td>
+            </tr>
+            <tr>
+              <td>#004</td>
+              <td>Sensor indutivo</td>
+              <td>Pintura</td>
+              <td><p class="tag-green">Baixa</p></td>
+              <td><p class="tag-green">Resolvida</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="dashboard-footer-critics">
+        <h3>Equipamentos críticos</h3>
+        <div class="dashboard-footer-critics-card">
+          <div class="dashboard-footer-critics-card-left">
+            <h3>Rôbo KUKA KR180</h3>
+            <p>Falha de ciclo automático</p>
+          </div>
+          <div class="dashboard-footer-critics-card-right">
+            <p class="tag-red">Critica</p>
+          </div>
+        </div>
+        <div class="dashboard-footer-critics-card">
+          <div class="dashboard-footer-critics-card-left">
+            <h3>CLP Omrno NX1P2</h3>
+            <p>Intermitência de comunicação</p>
+          </div>
+          <div class="dashboard-footer-critics-card-right">
+            <p class="tag-red">Critica</p>
+          </div>
+        </div>        
+        <div class="dashboard-footer-critics-card">
+          <div class="dashboard-footer-critics-card-left">
+            <h3>Esteira Principal</h3>
+            <p>Parada fora de sequência</p>
+          </div>
+          <div class="dashboard-footer-critics-card-right">
+            <p class="tag-orange">Alta</p>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

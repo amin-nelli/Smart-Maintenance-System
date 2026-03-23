@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Maintenance System | Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body-navigation">
+  <div class="menu">
+    <div class="menu-title">
+      <span class="menu-badge">v1.0</span>
+      <h2>Smart Maintenance System</h2>
+      <p>Painel de manutenção industrial</p>
+    </div>
+    <div class="menu-navigation">
+      <a href="02-dashboard.html" class="menu-navigation-card">Dashboard</a>
+      <a href="03-cadastro.html" class="menu-navigation-card">Nova Ocorrencia</a>
+      <a href="04-ocorrencias.html" class="menu-navigation-card">Ocorrencias</a>
+      <a href="#" class="menu-navigation-card zip-card">Relatórios</a>
+      <a href="#" class="menu-navigation-card zip-card">Configuracoes</a>
+    </div>
+    <div class="menu-description">
+      <strong>Smart Maintenance</strong>
+      <p>Sistema para acompanhamento de falhas e ordens de manutenção.</p>
+      <span>v1.0.0 - 2026</span>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="occurrence-page">
+      <div class="occurrence-header">
+        <div>
+          <h1>Nova Ocorrência</h1>
+          <p>Registre uma nova falha para acompanhamento da manutenção.</p>
+        </div>
+      </div>
+
+      <div class="occurrence-layout">
+        <div class="occurrence-form-card">
+          <h3>Cadastro de ocorrência</h3>
+
+          <form class="occurrence-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="equipment">Equipamento</label>
+                <input type="text" id="equipment" placeholder="Ex: Robô KUKA KR180">
+              </div>
+
+              <div class="form-group">
+                <label for="sector">Setor</label>
+                <select id="sector">
+                  <option value="">Selecione</option>
+                  <option>Produção</option>
+                  <option>Solda</option>
+                  <option>Montagem</option>
+                  <option>Pintura</option>
+                  <option>Manutenção</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="failure-type">Tipo de falha</label>
+                <select id="failure-type">
+                  <option value="">Selecione</option>
+                  <option>Elétrica</option>
+                  <option>Mecânica</option>
+                  <option>Sensor</option>
+                  <option>CLP</option>
+                  <option>Robô</option>
+                  <option>Segurança</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="priority">Prioridade</label>
+                <select id="priority">
+                  <option value="">Selecione</option>
+                  <option>Baixa</option>
+                  <option>Média</option>
+                  <option>Alta</option>
+                  <option>Crítica</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status">
+                  <option value="">Selecione</option>
+                  <option>Aberta</option>
+                  <option>Em análise</option>
+                  <option>Em manutenção</option>
+                  <option>Resolvida</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="date">Data</label>
+                <input type="date" id="date">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Descrição da falha</label>
+              <textarea id="description" rows="6" placeholder="Descreva a ocorrência..."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="reset" class="secondary-button">Limpar</button>
+              <button type="submit" class="primary-button">Salvar ocorrência</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="occurrence-side">
+          <div class="info-card">
+            <h3>Orientações</h3>
+            <p>Preencha os dados da ocorrência com clareza para facilitar o diagnóstico e o acompanhamento da
+              manutenção.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Boas práticas</h3>
+            <ul>
+              <li>Informar o equipamento corretamente</li>
+              <li>Selecionar a prioridade adequada</li>
+              <li>Descrever os sintomas da falha</li>
+              <li>Registrar setor e data</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

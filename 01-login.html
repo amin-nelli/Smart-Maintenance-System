@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Maintenance System | Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="login-body">
+  <div class="login-background-shape login-shape-1"></div>
+  <div class="login-background-shape login-shape-2"></div>
+
+  <div class="login-container">
+    <div class="login-description">
+      <span class="login-description-span">Sistemas industriais</span>
+      <h1>Smart Maintenance System</h1>
+      <p>Sistema de registro e acompanhamento de falhas industriais.</p>
+      <div class="login-description-card">
+        <h3>Monitoramento</h3>
+        <p>Controle de ocorrencias em produção</p>
+      </div>
+      <div class="login-description-card">
+        <h3>Organização</h3>
+        <p>Status, prioridade e histórico de falhas</p>
+      </div>
+      <div class="login-description-card">
+        <h3>Eficiencia</h3>
+        <p>Mais clareza no acompanhamento tecnico</p>
+      </div>
+    </div>
+    <div class="login-login">
+      <h2>Acessar Sistema</h2>
+      <p class="login-login-sub">Entre com seu usuario e senha para continuar</p>
+      <label for="usuario">Usuário</label>
+      <input type="text" id="usuario" placeholder="Digite seu usuario">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" placeholder="Digite sua senha">
+      <button type="submit" class="login-bnt">Entrar</button>
+      <p id="mensagem-erro"></p>
+      <div class="login-information">
+        <p><strong>Login de teste:</strong> admin</p>
+        <p><strong>Senha de teste:</strong> 1234</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const botaoEntrar = document.querySelector(".login-bnt");
+    const campoUsuario = document.getElementById("usuario");
+    const campoSenha = document.getElementById("senha");
+    const mensagemErro = document.getElementById("mensagem-erro");
+
+    botaoEntrar.addEventListener("click", function () {
+      const usuario = campoUsuario.value.trim();
+      const senha = campoSenha.value.trim();
+
+      if (usuario === "" || senha === "") {
+        mensagemErro.textContent = "Preencha usuário e senha.";
+        mensagemErro.style.color = "red";
+        return;
+      }
+
+      if (usuario === "admin" && senha === "1234") {
+        mensagemErro.textContent = "Login realizado com sucesso!";
+        mensagemErro.style.color = "green";
+
+        setTimeout(function () {
+          window.location.href = "02-dashboard.html";
+        }, 800);
+      } else {
+        mensagemErro.textContent = "Usuário ou senha inválidos.";
+        mensagemErro.style.color = "red";
+      }
+    });
+  </script>
+</body>
+
+</html>

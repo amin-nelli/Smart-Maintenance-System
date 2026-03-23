@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Maintenance System | Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="body-navigation">
+  <div class="menu">
+    <div class="menu-title">
+      <span class="menu-badge">v1.0</span>
+      <h2>Smart Maintenance System</h2>
+      <p>Painel de manutenção industrial</p>
+    </div>
+    <div class="menu-navigation">
+      <a href="02-dashboard.html" class="menu-navigation-card">Dashboard</a>
+      <a href="03-cadastro.html" class="menu-navigation-card">Nova Ocorrencia</a>
+      <a href="04-ocorrencias.html" class="menu-navigation-card">Ocorrencias</a>
+      <a href="#" class="menu-navigation-card zip-card">Relatórios</a>
+      <a href="#" class="menu-navigation-card zip-card">Configuracoes</a>
+    </div>
+    <div class="menu-description">
+      <strong>Smart Maintenance</strong>
+      <p>Sistema para acompanhamento de falhas e ordens de manutenção.</p>
+      <span>v1.0.0 - 2026</span>
+    </div>
+  </div>
+  <div class="occurrences-page">
+    <div class="occurrences-header">
+      <div>
+        <h1>Ocorrências</h1>
+        <p>Visualize, filtre e acompanhe as falhas registradas no sistema.</p>
+      </div>
+
+      <div class="occurrences-header-actions">
+        <a href="03-cadastro.html" class="primary-button">Nova ocorrência</a>
+      </div>
+    </div>
+
+    <div class="occurrences-filters-card">
+      <div class="occurrences-filters-title">
+        <h3>Filtros</h3>
+        <p>Use os filtros abaixo para localizar ocorrências com mais facilidade.</p>
+      </div>
+
+      <div class="filters-row">
+        <div class="filter-group">
+          <label for="search">Buscar</label>
+          <input type="text" id="search" placeholder="Buscar por equipamento ou setor">
+        </div>
+
+        <div class="filter-group">
+          <label for="status-filter">Status</label>
+          <select id="status-filter">
+            <option value="">Todos</option>
+            <option>Aberta</option>
+            <option>Em análise</option>
+            <option>Em manutenção</option>
+            <option>Resolvida</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="priority-filter">Prioridade</label>
+          <select id="priority-filter">
+            <option value="">Todas</option>
+            <option>Baixa</option>
+            <option>Média</option>
+            <option>Alta</option>
+            <option>Crítica</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="sector-filter">Setor</label>
+          <select id="sector-filter">
+            <option value="">Todos</option>
+            <option>Produção</option>
+            <option>Solda</option>
+            <option>Montagem</option>
+            <option>Pintura</option>
+            <option>Manutenção</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="occurrences-table-card">
+      <div class="occurrences-table-header">
+        <div>
+          <h3>Lista de ocorrências</h3>
+          <p>Ocorrências registradas no sistema.</p>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <div class="occurrences-table">
+          <div class="table-head">
+            <div>ID</div>
+            <div>Equipamento</div>
+            <div>Setor</div>
+            <div>Prioridade</div>
+            <div>Status</div>
+            <div>Data</div>
+            <div>Ações</div>
+          </div>
+
+          <div class="table-body">
+            <div class="table-row">
+              <div>#001</div>
+              <div>Robô KUKA KR16</div>
+              <div>Solda</div>
+              <div><span class="status-tag high">Alta</span></div>
+              <div><span class="status-tag open">Aberta</span></div>
+              <div>21/03/2026</div>
+              <div class="table-actions">
+                <button class="table-button edit-button">Editar</button>
+                <button class="table-button delete-button">Excluir</button>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div>#002</div>
+              <div>CLP Mitsubishi FX</div>
+              <div>Montagem</div>
+              <div><span class="status-tag medium">Média</span></div>
+              <div><span class="status-tag analysis">Em análise</span></div>
+              <div>21/03/2026</div>
+              <div class="table-actions">
+                <button class="table-button edit-button">Editar</button>
+                <button class="table-button delete-button">Excluir</button>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div>#003</div>
+              <div>Esteira principal</div>
+              <div>Produção</div>
+              <div><span class="status-tag critical">Crítica</span></div>
+              <div><span class="status-tag maintenance">Em manutenção</span></div>
+              <div>20/03/2026</div>
+              <div class="table-actions">
+                <button class="table-button edit-button">Editar</button>
+                <button class="table-button delete-button">Excluir</button>
+              </div>
+            </div>
+
+            <div class="table-row">
+              <div>#004</div>
+              <div>Sensor indutivo</div>
+              <div>Pintura</div>
+              <div><span class="status-tag low">Baixa</span></div>
+              <div><span class="status-tag solved">Resolvida</span></div>
+              <div>19/03/2026</div>
+              <div class="table-actions">
+                <button class="table-button edit-button">Editar</button>
+                <button class="table-button delete-button">Excluir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
